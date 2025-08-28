@@ -1,18 +1,14 @@
-public class Palindrome {
+public class factorial{
+
     public static void main(String[] args) {
-        if (args.length == 0) {
-            System.out.println("Please provide a word to check!");
-            return;
+
+        int num = 5;
+        long factorial = 1;
+        for(int i = 1; i <= num; ++i)
+        {
+           
+            factorial *= i;
         }
-        String word = args[0];  // Take word from argument
-        if (isPalindrome(word)) {
-            System.out.println(word + " is a palindrome!");
-        } else {
-            System.out.println(word + " is NOT a palindrome!");
-        }
-    }
-    public static boolean isPalindrome(String str) {
-        String reversed = new StringBuilder(str).reverse().toString();
-        return str.equalsIgnoreCase(reversed);
+        System.out.printf("Factorial of %d = %d", num, factorial);
     }
 }
